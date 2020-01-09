@@ -1,7 +1,8 @@
-## 群晖nas自用：
+
 
 ### 感谢以下项目:
 
+[https://github.com/gshang2017/docker](https://github.com/gshang2017/docker "https://github.com/gshang2017/docker")                      $    
 [https://github.com/iikira/BaiduPCS-Go](https://github.com/iikira/BaiduPCS-Go "https://github.com/iikira/BaiduPCS-Go")                                       
 [https://github.com/liuzhuoling2011/baidupcs-web](https://github.com/liuzhuoling2011/baidupcs-web "https://github.com/liuzhuoling2011/baidupcs-web")
 
