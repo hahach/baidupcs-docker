@@ -1,4 +1,4 @@
-FROM alpine:3.10
+FROM alpine
 
 ARG BaiduPCSGo_VER=3.7.0
 ARG  S6_VER=1.22.1.0
