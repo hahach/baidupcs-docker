@@ -1,13 +1,15 @@
 FROM alpine
 
-ARG BaiduPCSGo_VER=3.7.0
+ARG BaiduPCSGo_VER
 ARG  S6_VER=1.22.1.0
 
 COPY  root /
 
-RUN apk add --no-cache bash  \
+RUN apk add --no-cache bash  ca-certificates  \
 &&  rm -rf /var/cache/apk/*  \
-&&  wget --no-check-certificate https://github.com/liuzhuoling2011/baidupcs-web/releases/download/${BaiduPCSGo_VER}/BaiduPCS-Go-${BaiduPCSGo_VER}-linux-amd64.zip \
+&&  addgroup -g 1000 -S emile  \
+&&  adduser emile -u 1000 -D -s /bin/bash -G emile  \
+&&  wget  https://github.com/liuzhuoling2011/baidupcs-web/releases/download/${BaiduPCSGo_VER}/BaiduPCS-Go-${BaiduPCSGo_VER}-linux-amd64.zip \
 #&&  wget --no-check-certificate http://qiniu.zoranjojo.top/BaiduPCS-Go-${BaiduPCSGo_VER}-linux-amd64.zip  \
 &&  unzip BaiduPCS-Go-${BaiduPCSGo_VER}-linux-amd64.zip \
 &&  mv BaiduPCS-Go-${BaiduPCSGo_VER}-linux-amd64/BaiduPCS-Go /usr/local/bin/BaiduPCS-Go \
